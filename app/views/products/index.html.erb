@@ -1,0 +1,12 @@
+<h1>Mos Corner Store</h1>
+<h3>You will never  find a more wretched hive of plums and kitchenry</h3>
+
+<%= link_to 'Send us your products!', new_product_path %>
+  
+<ul>
+  <% for product in @products %>
+   <li><%= product.title %> <%= number_to_currency(product.display_price)  %> Credits <%= link_to "edit", edit_product_path(product) %> </li>
+  
+  
+  <% end %>
+</ul>  
